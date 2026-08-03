@@ -1,0 +1,35 @@
+{
+  "name": "parabank-automation-framework",
+  "version": "1.0.0",
+  "description": "Hybrid UI + API test automation framework for ParaBank (Parasoft demo banking application), built with Playwright and the Page Object Model.",
+  "scripts": {
+    "test": "playwright test",
+    "test:ui": "playwright test tests/ui",
+    "test:api": "playwright test tests/api",
+    "test:hybrid": "playwright test tests/api/hybrid.spec.js",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:sanity": "playwright test --grep @smoke --project=chromium",
+    "test:e2e": "playwright test --grep @e2e",
+    "test:accounts": "playwright test tests/ui/accounts.spec.js",
+    "test:transfer": "playwright test tests/ui/transfer.spec.js",
+    "test:billpay": "playwright test tests/ui/billpay.spec.js",
+    "test:transactions": "playwright test tests/ui/transactions.spec.js",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report",
+    "allure:generate": "allure generate allure-results --clean -o allure-report",
+    "allure:open": "allure open allure-report",
+    "allure:serve": "allure serve allure-results",
+    "codegen": "playwright codegen https://parabank.parasoft.com/parabank/index.htm"
+  },
+  "keywords": ["playwright", "automation", "pom", "banking", "sdet"],
+  "author": "Abhijnan Sarkar",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.47.0",
+    "allure-commandline": "^2.30.0",
+    "allure-playwright": "^3.0.5",
+    "dotenv": "^16.4.5"
+  }
+}

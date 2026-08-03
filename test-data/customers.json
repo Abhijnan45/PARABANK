@@ -1,0 +1,26 @@
+{
+  "validCustomerTemplate": {
+    "firstName": "Rohan",
+    "lastName": "Mehta",
+    "street": "221B Baker Colony",
+    "city": "Ahmedabad",
+    "state": "Gujarat",
+    "zipCode": "380015",
+    "phoneNumber": "079-4012-5566",
+    "ssn": "412-88-3210"
+  },
+  "boundaryData": {
+    "veryLongFirstName": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "singleCharUsername": "a",
+    "sqlInjectionAttempt": "' OR '1'='1",
+    "scriptInjectionAttempt": "<script>alert(1)</script>",
+    "whitespaceOnly": "   ",
+    "specialCharsZip": "38O01#"
+  },
+  "invalidLoginAttempts": [
+    { "username": "nonexistentuser12345", "password": "WrongPass123", "case": "unregistered username" },
+    { "username": "", "password": "", "case": "empty username and password" },
+    { "username": "john", "password": "", "case": "empty password only" },
+    { "username": "", "password": "demo123", "case": "empty username only" }
+  ]
+}

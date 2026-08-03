@@ -1,0 +1,24 @@
+{
+  "validPayee": {
+    "name": "Torrent Power Ltd",
+    "address": {
+      "street": "12 Navrangpura Road",
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "zipCode": "380009"
+    },
+    "phoneNumber": "079-4055-2211",
+    "accountNumber": "10001"
+  },
+  "invalidPayeeMissingName": {
+    "name": "",
+    "address": {
+      "street": "12 Navrangpura Road",
+      "city": "Ahmedabad",
+      "state": "Gujarat",
+      "zipCode": "380009"
+    },
+    "phoneNumber": "079-4055-2211",
+    "accountNumber": "10001"
+  }
+}
