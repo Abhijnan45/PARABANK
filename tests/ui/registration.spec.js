@@ -52,7 +52,7 @@ test.describe('ParaBank Registration', () => {
     // same credentials work on a fresh login — this is the real
     // "valid login" proof, generated fresh per run instead of relying
     // on a hardcoded shared account.
-    await page.goto('/logout.htm');
+    await page.goto('logout.htm');
     await loginPage.open();
     await loginPage.login(customer.username, customer.password);
     await expect(page).not.toHaveURL(/error/i);
@@ -162,7 +162,7 @@ test.describe('ParaBank Registration', () => {
     await registrationPage.register(first);
     await expect(page.locator('#rightPanel')).toContainText(/Welcome|created/i);
 
-    await page.goto('/logout.htm');
+    await page.goto('logout.htm');
     await registrationPage.open();
     const second = buildValidCustomer();
     await registrationPage.register(second);

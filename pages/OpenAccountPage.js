@@ -17,7 +17,7 @@ class OpenAccountPage extends BasePage {
   }
 
   async open() {
-    await this.goto('/openaccount.htm');
+    await this.goto('openaccount.htm');
     await this.waitForPageLoad();
   }
 

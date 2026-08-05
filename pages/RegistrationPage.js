@@ -23,7 +23,7 @@ class RegistrationPage extends BasePage {
   }
 
   async open() {
-    await this.goto('/register.htm');
+    await this.goto('register.htm');
     await this.waitForPageLoad();
   }
 

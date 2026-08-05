@@ -76,8 +76,8 @@ test.describe('ParaBank Advanced — Cookies & Session', () => {
     newCustomer,
     page,
   }) => {
-    await page.goto('/logout.htm');
-    await page.goto('/overview.htm');
+    await page.goto('logout.htm');
+    await page.goto('overview.htm');
     // ParaBank redirects unauthenticated access to overview.htm back
     // to the login page rather than showing account data.
     const loginPage = new LoginPage(page);

@@ -1,3 +1,5 @@
+const envConfig = require('../config/env.config');
+
 /**
  * BasePage
  *
@@ -15,7 +17,14 @@ class BasePage {
   }
 
   async goto(path = '') {
-    await this.page.goto(path);
+    const url = new URL(path, envConfig.baseURL).toString();
+    const response = await this.page.goto(url);
+    if (!response || !response.ok()) {
+      throw new Error(
+        `Navigation failed for ${path}: status=${response?.status() ?? 'no response'} url=${this.page.url()}`
+      );
+    }
+    return response;
   }
 
   async getTitle() {

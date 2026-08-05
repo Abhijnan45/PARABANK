@@ -9,14 +9,19 @@ class LoginPage extends BasePage {
     this.usernameInput = page.locator('input[name="username"]');
     this.passwordInput = page.locator('input[name="password"]');
     this.loginButton = page.locator('input[type="submit"][value="Log In"]');
-    this.registerLink = page.locator('a[href="register.htm"]');
-    this.forgotLoginLink = page.locator('a[href="lookup.htm"]');
+    this.registerLink = page.getByRole('link', { name: 'Register' });
+    this.forgotLoginLink = page.getByRole('link', { name: 'Forgot login info?' });
     this.errorMessage = page.locator('.error, #rightPanel p.error');
   }
 
   async open() {
-    await this.goto('/index.htm');
+    await this.goto('index.htm');
     await this.waitForPageLoad();
+    if (!(await this.isLoginFormVisible())) {
+      throw new Error(
+        `Login page did not render correctly after navigation. Current URL: ${this.page.url()} Title: ${await this.page.title()}`
+      );
+    }
   }
 
   async login(username, password) {

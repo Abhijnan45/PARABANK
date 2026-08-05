@@ -15,18 +15,18 @@ require('dotenv').config();
 
 const environments = {
   prod: {
-    baseURL: 'https://parabank.parasoft.com/parabank',
+    baseURL: 'https://parabank.parasoft.com/parabank/',
     apiBaseURL: 'https://parabank.parasoft.com/parabank/services/bank',
   },
   // Placeholder environments for framework extensibility.
   // Point these at a locally-deployed ParaBank instance (see parasoft/parabank
   // on GitHub) if you stand one up for isolated/parallel-safe test runs.
   qa: {
-    baseURL: process.env.QA_BASE_URL || 'https://parabank.parasoft.com/parabank',
+    baseURL: process.env.QA_BASE_URL || 'https://parabank.parasoft.com/parabank/',
     apiBaseURL: process.env.QA_API_BASE_URL || 'https://parabank.parasoft.com/parabank/services/bank',
   },
   dev: {
-    baseURL: process.env.DEV_BASE_URL || 'http://localhost:8080/parabank',
+    baseURL: process.env.DEV_BASE_URL || 'http://localhost:8080/parabank/',
     apiBaseURL: process.env.DEV_API_BASE_URL || 'http://localhost:8080/parabank/services/bank',
   },
 };

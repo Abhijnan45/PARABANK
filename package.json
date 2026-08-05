@@ -23,7 +23,13 @@
     "allure:serve": "allure serve allure-results",
     "codegen": "playwright codegen https://parabank.parasoft.com/parabank/index.htm"
   },
-  "keywords": ["playwright", "automation", "pom", "banking", "sdet"],
+  "keywords": [
+    "playwright",
+    "automation",
+    "pom",
+    "banking",
+    "sdet"
+  ],
   "author": "Abhijnan Sarkar",
   "license": "MIT",
   "devDependencies": {
@@ -31,5 +37,27 @@
     "allure-commandline": "^2.30.0",
     "allure-playwright": "^3.0.5",
     "dotenv": "^16.4.5"
-  }
+  },
+  "main": "playwright.config.js",
+  "directories": {
+    "test": "tests"
+  },
+  "dependencies": {
+    "allure-js-commons": "^3.10.2",
+    "charenc": "^0.0.2",
+    "crypt": "^0.0.2",
+    "is-buffer": "^1.1.6",
+    "md5": "^2.3.0",
+    "playwright": "^1.62.1",
+    "playwright-core": "^1.62.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhijnan45/PARABANK.git"
+  },
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Abhijnan45/PARABANK/issues"
+  },
+  "homepage": "https://github.com/Abhijnan45/PARABANK#readme"
 }

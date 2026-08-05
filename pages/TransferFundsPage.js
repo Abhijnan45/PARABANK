@@ -18,7 +18,7 @@ class TransferFundsPage extends BasePage {
   }
 
   async open() {
-    await this.goto('/transfer.htm');
+    await this.goto('transfer.htm');
     await this.waitForPageLoad();
   }
 

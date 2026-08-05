@@ -18,7 +18,7 @@ class FindTransactionsPage extends BasePage {
   }
 
   async open() {
-    await this.goto('/findtrans.htm');
+    await this.goto('findtrans.htm');
     await this.waitForPageLoad();
   }
 

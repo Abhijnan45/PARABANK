@@ -15,7 +15,7 @@ class AccountsOverviewPage extends BasePage {
   }
 
   async open() {
-    await this.goto('/overview.htm');
+    await this.goto('overview.htm');
     await this.waitForPageLoad();
   }
 

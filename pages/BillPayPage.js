@@ -22,7 +22,7 @@ class BillPayPage extends BasePage {
   }
 
   async open() {
-    await this.goto('/billpay.htm');
+    await this.goto('billpay.htm');
     await this.waitForPageLoad();
   }
 
